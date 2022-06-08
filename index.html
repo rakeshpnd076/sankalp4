@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Raleway:wght@100;200;400;500;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/160334937f.js" crossorigin="anonymous"></script>
+    <title>SANKAPL CANCER CARE FOUNDATION</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="#"><img src="images/logo.png" alt="SANKALP_LOGO"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">OUR WORK</a></li>
+                    <li><a href="#">DONATE US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <!-- slideshow -->
+        <div class="main">
+            <div class="slideshow-container prod-col">
+                <div class="mySlides fade">
+                    <img src="images/slide15.jpeg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/show17.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/show13.jpg">
+                </div>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+<section class="about">
+    <h1><i class="fa fa-handshake-o"></i> &nbsp About Sankalp Cancer Care Foundation &nbsp<i class="fa fa-handshake-o"></i></h1>
+    <img src="images/boss.jpeg"alt="Director_pic">
+    <h2>Dr. B. K. Singh <br>
+        Hon. Executive Director</h2> 
+    <div class="about-text">
+
+        <p>
+            Sankalp Cancer Care Foundation (SCCF) was setup in 2018 by Mrs. Jayanti Singh after her close family member and a couple of friends suffered from this dreaded cancer disease and finally expired. Sankalp is a “Not for Profit Charitable Organization” and it’s Mission is to educate the masses about the scourge of various types of Cancers, their Prevention and undertake timely screening for various types of Cancer at the door steps of the underprivileged masses free of cost. If an early detection is made, Sankalp would be able to help such patients to seek timely treatment and intervention. The process of timely Screening helps find Cancers at an early and treatable stage and thus improves the victim's survival rate immensely. 
+            </p>
+    </div>
+</section>
+<section class="join-us">
+    <h1>How You Can Add Value</h1>
+    <div class="join-row">
+        <div class="join-col">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h2>Come Join Us</h2>
+            <p>Here every individual matters to us, your participation is an appreciation.</p>
+        </div>
+        <div class="join-col">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <h2>Let's Spread Awareness</h2>
+            <p>Spreading Awareness to the society can save millions from it. Let's empower ourself.</p>
+        </div>
+        <div class="join-col">
+            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            <h2>Donate Us Now</h2>
+            <p>Here every single step, every single rupees count. Together we can eradicate Cancer.</p>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <h1>Feel Free To Connect With Us...</h1>
+    <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Full Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your full name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Organisation Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Organisation name..">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="lname">Mobile Number</label>
+            </div>
+            <div class="col-75">
+              <input type="number" id="lname" name="lastname" placeholder="Your Contact Number..">
+            </div>
+          </div>
+        
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+        </form>
+</section>
+
+
+<!-- -------------------footer----------------- -->
+<section class="footer">
+    <h4>SANKAPL CANCER CARE FOUNDATION</h4>
+    <p>We therefore appeal to you to donate generously to the “Sankalp Cancer Care Foundation” (SCCF) <br> so that a big impetus is given to this largely under-served area of health and safety !!!</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+
+    </div>
+    <h4>© Copyright 2018, All Rights Reserved</h4>
+    <!-- <p>Made with <i class="fa fa-heart-o"></i> by k.rakeshpandey@hotmail.com</p> -->
+</section>
+
+
+
+    </section>
+    <!-- ---------------------javascript----------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0px";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
